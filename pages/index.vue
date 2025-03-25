@@ -31,17 +31,17 @@
         <!-- 聊天窗口 -->
         <div>
             <label class="input">
-                <span class="label">caller's ID:</span>
-                <input type="text" v-model="callerUserID" placeholder="URL" />
+                <span class="label">呼叫方：</span>
+                <input type="text" v-model="callerUserID" placeholder="输入名称" />
             </label>
-            <button class="btn" @click="init"> step1. init </button> <br>
+            <button class="btn" @click="init"> 1.初始化 </button> <br>
         </div>
         <div>
             <label class="input">
-                <span class="label">callee's ID:</span>
-                <input type="text" v-model="calleeUserID" placeholder="URL" />
+                <span class="label">接收方：</span>
+                <input type="text" v-model="calleeUserID" placeholder="输入名称" />
             </label>
-            <button class="btn" @click="call"> step2. call </button>
+            <button class="btn" @click="call"> 2.呼叫 </button>
         </div>
 
         <!--【1】Import the TUICallKit component: Call interface UI -->
