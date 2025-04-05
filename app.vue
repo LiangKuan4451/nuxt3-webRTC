@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto relative">
     <NavBar />
     <NuxtPage />
-    <Loading v-if="showLoader" :progress="loadingProgress" @loaded="handleLoaded" />
   </div>
+  <loadingDice />
 </template>
 
 <script setup>
@@ -27,7 +27,5 @@ onMounted(() => {
   simulateLoading();
 });
 
-const handleLoaded = () => {
-  showLoader.value = false;
-};
+
 </script>

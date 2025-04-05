@@ -20,7 +20,7 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <button class="themeMode btn btn-link text-warning" @click="changeThemeMode"><Icon name="mdi:white-balance-sunny" size="2rem" mode="svg"/></button>
+      <button class="themeMode btn btn-link text-warning" @click="changeThemeMode"><Icon :name="themeIcon" size="2rem" mode="svg"/></button>
     </div>
   </div>
 </template>
@@ -29,14 +29,14 @@
 import { ref } from 'vue'
 import {gsap} from 'gsap'
 const navbarItems = ref([
-  { name: '主页', link: 'index' },
+  { name: '主页', link: '/' },
   { name: '作品', link: 'projects' },
   { name: '关于我', link: 'info' },
 ])
+const themeIcon = ref('mdi:w hite-balance-sunny')
 const activeIndex = ref()
 
-const changeThemeMode = () => {
-}
+
 </script>
 
 <style scoped>
