@@ -1,16 +1,17 @@
 <template>
-  <div class="container mx-auto relative">
-    <NavBar />
-    <NuxtPage />
+  <div class="container mx-auto relative ">
+      <NavBar />
+      <NuxtPage />        
+      <Footer />
   </div>
-  <loadingDice />
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 
+const themeMode = localStorage.getItem('themeMode')
+
 const loadingProgress = ref(0);
-const showLoader = ref(true);
 
 // 模拟加载过程
 function simulateLoading() {
@@ -25,6 +26,12 @@ function simulateLoading() {
 
 onMounted(() => {
   simulateLoading();
+  if(!localStorage.getItem('themeMode')){
+    localStorage.setItem('themeMode', 'light')
+    document.documentElement.setAttribute('data-theme', 'light')
+  }else{
+    document.documentElement.setAttribute('data-theme', themeMode)
+  }
 });
 
 

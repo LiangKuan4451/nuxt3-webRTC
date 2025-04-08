@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 rounded-b-2xl shadow-sm">
+  <div class="navbar bg-base-100 rounded-b-2xl shadow-2xs glass">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <button class="themeMode btn btn-link text-warning" @click="changeThemeMode"><Icon :name="themeIcon" size="2rem" mode="svg"/></button>
+      <button class="themeMode btn btn-link" :class="themeIcon.class" @click="changeThemeMode"><Icon :name="themeIcon.contant" size="2rem" mode="svg"/></button>
     </div>
   </div>
 </template>
@@ -33,15 +33,38 @@ const navbarItems = ref([
   { name: '作品', link: 'projects' },
   { name: '关于我', link: 'info' },
 ])
-const themeIcon = ref('mdi:w hite-balance-sunny')
-const activeIndex = ref()
 
+const themeIconList = ref([{
+  contant:'mdi:white-balance-sunny',
+  name:'light',
+  class:'text-orange-400'
+},{
+  contant:'mdi:moon-waning-crescent',
+  name:'dark',
+  class:'text-yellow-200'
+}])
+
+const themeIcon = ref(themeIconList.value[0])
+
+const activeIndex = ref()
+const changeThemeMode = function(){
+  const themeMode = localStorage.getItem('themeMode')
+  if (themeMode === 'dark') {
+    themeIcon.value = themeIconList.value[0]
+    document.documentElement.setAttribute('data-theme', themeIcon.value.name)
+    localStorage.setItem('themeMode', themeIcon.value.name)
+  } else {
+    themeIcon.value = themeIconList.value[1]
+    document.documentElement.setAttribute('data-theme', themeIcon.value.name)
+    localStorage.setItem('themeMode', themeIcon.value.name)
+  }
+}
 
 </script>
 
 <style scoped>
 .navbar {
-  @apply transition-all duration-200 opacity-75 hover:opacity-95;
+  @apply hover:opacity-75;
 }
 
 </style>
