@@ -2,7 +2,6 @@
     <div>
         主页    
         <button class="btn btn-primary">Default</button>
-        
           
     </div>
 </template>
