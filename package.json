@@ -17,7 +17,7 @@
     "@tailwindcss/vite": "^4.1.4",
     "@types/three": "^0.176.0",
     "animejs": "^4.0.2",
-    "daisyui": "^5.0.28",
+    "daisyui": "^5.0.29",
     "eslint": "^9.25.1",
     "gsap": "^3.12.7",
     "nuxt": "^3.17.1",

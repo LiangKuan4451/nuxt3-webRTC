@@ -12,19 +12,19 @@ const supabaseKey = process.env.SUPABASE_KEY
 
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-const sqlData = {
-    "name": body.name || null,
-    "birth_date": body.birth_date || null,
-    "weight": body.weight || null,
-    "height": body.height || null,
-    "nickname": body.nickname || null,
-    "avatar_url": body.avatar_url || null,
-    "phone": body.phone || null,
-    "qq": body.qq || null,
-}
+// const sqlData = {
+//     "name": body.name || null,
+//     "birth_date": body.birth_date || null,
+//     "weight": body.weight || null,
+//     "height": body.height || null,
+//     "nickname": body.nickname || null,
+//     "avatar_url": body.avatar_url || null,
+//     "phone": body.phone || null,
+//     "qq": body.qq || null,
+// }
 
 
-const userData = await supabase.from('users').update([sqlData]).eq('openid',openid).select()
+const userData = await supabase.from('users').update([body]).eq('openid',openid).select()
 
 return userData
 })
