@@ -8,7 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 export default defineEventHandler(async (event) => {
   
   const files = await readMultipartFormData(event)
-  // console.log('files',files);
+  console.log('files',files);
   
   const file = files[0]
   const filename= `avatar/${file.name}`
