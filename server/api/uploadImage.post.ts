@@ -6,25 +6,20 @@ const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 // 上传图片
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
   
-  if (!body.file || !body.fileName) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: '缺少文件数据或文件名'
-    });
-  }
+  const files = await readMultipartFormData(event)
+  // console.log('files',files);
   
-  // 3. 处理 Base64 数据
-  const base64Data = body.file.split(',')[1]; // 移除 data:image/jpeg;base64, 前缀
-  const buffer = Buffer.from(base64Data, 'base64');
-  
-  // 4. 上传到 Supabase Storage
+  const file = files[0]
+  const filename= `avatar/${file.name}`
+  const fileExt = filename.split('.').pop()
+  const filePath = `uploads/${Date.now()}.${fileExt}`
+  // const openid = 
   try {
     const { data, error } = await supabase.storage
       .from('user-images') // 替换为你的存储桶名称
-      .upload(body.fileName, buffer, {
-        contentType: body.fileType || 'image/jpeg',
+      .upload(filename, file.data, {
+        contentType: file.type,
         upsert: true
       });
     
@@ -38,7 +33,7 @@ export default defineEventHandler(async (event) => {
     // 5. 获取公共 URL (如果需要)
     const { data: urlData } = supabase.storage
       .from('user-images')
-      .getPublicUrl(body.fileName);
+      .getPublicUrl(filename);
     
     return {
       success: true,
