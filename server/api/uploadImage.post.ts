@@ -8,7 +8,13 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 export default defineEventHandler(async (event) => {
   
   const files = await readMultipartFormData(event)
-  console.log('files',files);
+
+  if (!files || files.length === 0) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'No file uploaded'
+    })
+  }
   
   const file = files[0]
   const filename= `avatar/${file.name}`
