@@ -2,7 +2,6 @@
   <div class="container mx-auto relative ">
       <NavBar />
       <NuxtPage />        
-      <Footer />
   </div>
 </template>
 
