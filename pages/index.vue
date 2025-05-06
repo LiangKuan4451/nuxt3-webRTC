@@ -3,14 +3,17 @@
     <div class="container p-6 gap-4 min-h-screen sm:p-20">
 
         <!-- 个人信息区域 -->
-        <div class="w-full">
-            <p class="">您好！欢迎来到我的个人网站，这里展示了我的项目作品和个人信息。我是一名前端开发工程师，目前在转向全栈工程师。</p>
-            <p class="py-6">这个网站还没设计好，目前只是作为我微信小程序的API接口。</p>
+        <div class="w-full space-y-2.5">
+            <div class="space-y-2">
+                <p><span class="text-2xl">您好！</span>欢迎来到我的个人网站，这里展示了我的项目作品和个人信息。</p>
+                <p>我是一名前端开发工程师，目前在寻找<span class="text-2xl">工作机会</span></p>
+                <p>这个网站还没设计好，目前只是作为我微信小程序的API接口。</p>
+            </div>
 
             <!-- 导航按钮区域 -->
             <div class="flex gap-4">
-                <NuxtLink to="/projects" class="btn btn-primary">查看作品</NuxtLink>
-                <NuxtLink to="/info" class="btn btn-primary">关于我</NuxtLink>
+                <NuxtLink to="/projects" class="btn btn-primary">个人作品</NuxtLink>
+                <NuxtLink to="/resume" class="btn btn-primary">我的简历</NuxtLink>
             </div>
 
             <!-- 联系方式区域 -->
