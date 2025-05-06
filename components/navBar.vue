@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 rounded-b-2xl shadow-2xs glass z-50">
+  <div class="navbar bg-base-100 rounded-b-2xl shadow-2xs glass">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -7,7 +7,7 @@
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow">
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
           <li v-for="(navbarItem, index) in navbarItems" :key="index"><NuxtLink :to="navbarItem.link">{{ navbarItem.name }}</NuxtLink></li>
         </ul>
       </div>
@@ -31,7 +31,7 @@ import {gsap} from 'gsap'
 const navbarItems = ref([
   { name: '主页', link: '/' },
   { name: '作品', link: 'projects' },
-  { name: '关于我', link: 'info' },
+  // { name: '简历', link: 'resume' },
 ])
 
 const themeIconList = ref([{

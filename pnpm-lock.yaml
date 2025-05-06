@@ -57,6 +57,9 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
     devDependencies:
+      '@iconify-json/arcticons':
+        specifier: ^1.2.24
+        version: 1.2.24
       '@iconify-json/devicon':
         specifier: ^1.2.23
         version: 1.2.23
@@ -774,6 +777,9 @@ packages:
   '@humanwhocodes/retry@0.4.2':
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/arcticons@1.2.24':
+    resolution: {integrity: sha512-l5mQELXr9Sv87DPmEcUJ3Ub1qNbRKpr4ax+0LoBbYmHU+osTdJ3FNgTH04/VKMKp2+95MNbA5Tt6gwgPkj5FNQ==}
 
   '@iconify-json/devicon-plain@1.2.22':
     resolution: {integrity: sha512-KwNTsQQBRu4mPvGVhYsarS6a7pNPrsOZQpfAfJ5wAn0DPHVzWPmyVzlAQYHMd4wM2bKkpq8SosqkmwT7Gb37ag==}
@@ -5716,6 +5722,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.2': {}
+
+  '@iconify-json/arcticons@1.2.24':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/devicon-plain@1.2.22':
     dependencies:

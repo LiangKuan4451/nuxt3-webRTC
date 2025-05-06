@@ -29,6 +29,7 @@
   },
   "packageManager": "pnpm@10.10.0",
   "devDependencies": {
+    "@iconify-json/arcticons": "^1.2.24",
     "@iconify-json/devicon": "^1.2.23",
     "@iconify-json/devicon-plain": "^1.2.22",
     "@iconify-json/ep": "^1.2.2",
