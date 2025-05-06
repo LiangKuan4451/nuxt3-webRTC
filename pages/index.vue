@@ -1,9 +1,9 @@
 <template>
     <!-- 主页英雄区域 -->
-    <div class="container p-20 gap-4 min-h-screen">
+    <div class="container p-6 gap-4 min-h-screen sm:p-20">
 
         <!-- 个人信息区域 -->
-        <div class="w-full ">
+        <div class="w-full">
             <p class="">您好！欢迎来到我的个人网站，这里展示了我的项目作品和个人信息。我是一名前端开发工程师，目前在转向全栈工程师。</p>
             <p class="py-6">这个网站还没设计好，目前只是作为我微信小程序的API接口。</p>
 
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <!-- 技术栈展示区域 -->
-            <div class="mt-8 w-1/3  ">
+            <div class="mt-8 max-w-3xl ">
                 <h2 class="text-2xl font-semibold mb-4">技术栈</h2>
 
                 <div class="space-y-4">
