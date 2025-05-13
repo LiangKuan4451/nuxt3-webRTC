@@ -32,7 +32,7 @@
                     </div>
                     <div class="avatar placeholder">
                         <div class="bg-neutral text-neutral-content rounded-full w-24 md:w-32">
-                            <span class="text-3xl">潘</span>
+                            <img src="/images/pyy.jpg" alt="">
                         </div>
                     </div>
                 </div>
