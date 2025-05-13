@@ -284,6 +284,7 @@ const projects = [
       "Node.js",
       "TailwindCSS",
       "Element UI",
+      "DocxTemplater"
     ],
     link: {},
   },
