@@ -5,8 +5,8 @@
         <!-- 个人信息区域 -->
         <div class="w-full space-y-2.5">
             <div class="space-y-2">
-                <p><span class="text-2xl">您好！</span>欢迎来到我的个人网站，这里展示了我的项目作品和个人信息。</p>
-                <p>我是一名前端开发工程师，目前在寻找<span class="text-2xl">工作机会</span></p>
+                <p><span class="text-2xl">您好！</span>欢迎来到我的个人网站</p>
+                <p>我是一名前端开发工程师，目前在寻找<span class=" font-bold">工作机会</span></p>
                 <p>这个网站还没设计好，目前只是作为我微信小程序的API接口。</p>
             </div>
 
