@@ -28,11 +28,20 @@
               @click="openImageModal(project)"
             />
             <!-- 添加点击放大提示 -->
-            <div class="absolute bottom-2 right-2 tooltip tooltip-left" data-tip="点击图片放大查看">
-              <div class="hidden md:flex badge badge-primary p-2 opacity-80 hover:opacity-100 transition-opacity" @click="openImageModal(project)">
+            <div
+              class="absolute bottom-2 right-2 tooltip tooltip-left"
+              data-tip="点击图片放大查看"
+            >
+              <div
+                class="hidden md:flex badge badge-primary p-2 opacity-80 hover:opacity-100 transition-opacity"
+                @click="openImageModal(project)"
+              >
                 <Icon name="mdi:magnify-plus" size="1rem" />
               </div>
-              <div class="md:hidden badge badge-primary p-2 opacity-80 hover:opacity-100 transition-opacity" @click="openImageModal(project)">
+              <div
+                class="md:hidden badge badge-primary p-2 opacity-80 hover:opacity-100 transition-opacity"
+                @click="openImageModal(project)"
+              >
                 点击图片放大查看
               </div>
             </div>
@@ -237,8 +246,8 @@ const projects = [
     description:
       "一款基于AI技术的食材营养分析小程序，帮助用户了解食材的营养成分和健康信息。",
     icon: "mdi:food-apple",
-    image: "/images/uniapp-wx-logo.jpg",
-    images: ["/images/uniapp-wx-logo.jpg"],
+    image: "/images/wx-deepseek-logo.jpg",
+    images: ['/images/wx-deepseek-logo.jpg',"/images/wx-deepseek-1.jpg",'/images/wx-deepseek-2.jpg'],
     technologies: [
       "Vue",
       "Nuxt",
@@ -260,8 +269,15 @@ const projects = [
     title: "俞行日记手机app",
     description: "一款医院旅行者应用，帮助用户记录和管理医院就诊信息。",
     icon: "mdi:hospital-building",
-    image: "/images/uniapp-android-logo.png",
-    images: ["/images/uniapp-android-logo.png"],
+    image: "/images/HospitalTraveler-logo.png",
+    images: [
+      "/images/HospitalTraveler-logo.png",
+      "/images/HospitalTraveler-1.jpg",
+      "/images/HospitalTraveler-2.jpg",
+      "/images/HospitalTraveler-3.jpg",
+      "/images/HospitalTraveler-4.jpg",
+      "/images/HospitalTraveler-5.jpg",
+    ],
     technologies: ["UniApp", "TailwindCSS", "Pinia", "Android Studio"],
     link: {
       type: "github",
@@ -284,7 +300,7 @@ const projects = [
       "Node.js",
       "TailwindCSS",
       "Element UI",
-      "DocxTemplater"
+      "DocxTemplater",
     ],
     link: {},
   },
