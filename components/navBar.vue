@@ -32,6 +32,7 @@ const navbarItems = ref([
   { name: '主页', link: '/' },
   { name: '作品', link: 'projects' },
   { name: '简历', link: 'resume' },
+  { name: '3D', link: '3d' },
 ])
 
 const themeIconList = ref([{
