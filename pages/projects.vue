@@ -255,7 +255,7 @@ const projects = [
       {
         type: "wechat",
         icon: "mdi:wechat",
-        text: "微信小程序",
+        text: `微信"扫一扫"访问小程序"`,
       },
     ],
   },
