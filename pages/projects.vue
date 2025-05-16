@@ -86,27 +86,16 @@
           </div>
 
           <!-- 项目链接区域 -->
-          <div class="card-actions justify-end mt-4">
-            <!-- 微信小程序链接 -->
-            <template v-if="project.link.type === 'wechat'">
-              <div class="tooltip" :data-tip="project.link.tooltip">
-                <button class="btn btn-primary btn-sm md:btn-md">
-                  <Icon :name="project.link.icon" size="1.5rem" />
-                  {{ project.link.text }}
-                </button>
-              </div>
-            </template>
-            <!-- GitHub链接 -->
-            <template v-else-if="project.link.type === 'github'">
+          <div class="card-actions justify-end mt-4" >
               <a
-                :href="project.link.url"
+                :href="item.url"
                 target="_blank"
                 class="btn btn-primary btn-sm md:btn-md"
+                v-for="(item, index) in project.link" :key="index"
               >
-                <Icon :name="project.link.icon" size="1.5rem" />
-                {{ project.link.text }}
+                <Icon :name="item.icon" size="1.5rem" />
+                {{ item.text }}
               </a>
-            </template>
           </div>
         </div>
       </div>
@@ -257,12 +246,11 @@ const projects = [
       "DeepSeek",
       "Pinia",
     ],
-    link: {
+    link: [{
       type: "wechat",
       icon: "mdi:wechat",
       text: "微信小程序",
-      tooltip: "微信小程序搜索'鹰宇食材助手'",
-    },
+    }],
   },
   // 项目二：俞行日记手机app
   {
@@ -279,12 +267,19 @@ const projects = [
       "/images/HospitalTraveler-5.jpg",
     ],
     technologies: ["UniApp", "TailwindCSS", "Pinia", "Android Studio"],
-    link: {
+    link: [{
       type: "github",
       icon: "mdi:github",
       text: "GitHub",
       url: "https://github.com/LiangKuan4451/Hospital-Traveler/releases",
     },
+    {
+      type: "github",
+      icon: "mdi:download",
+      text: "下载APP",
+      url: "/public/app/1.1.0.apk",
+    },
+  ],
   },
   {
     title: "PDF论文内容索引工具",
