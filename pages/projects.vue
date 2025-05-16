@@ -86,16 +86,17 @@
           </div>
 
           <!-- 项目链接区域 -->
-          <div class="card-actions justify-end mt-4" >
-              <a
-                :href="item.url"
-                target="_blank"
-                class="btn btn-primary btn-sm md:btn-md"
-                v-for="(item, index) in project.link" :key="index"
-              >
-                <Icon :name="item.icon" size="1.5rem" />
-                {{ item.text }}
-              </a>
+          <div class="card-actions justify-end mt-4">
+            <a
+              target="_blank"
+              class="btn btn-primary btn-sm md:btn-md"
+              v-for="(item, index) in project.link"
+              :key="index"
+              :href="item.url"
+            >
+              <Icon :name="item.icon" size="1.5rem" />
+              {{ item.text }}
+            </a>
           </div>
         </div>
       </div>
@@ -236,7 +237,11 @@ const projects = [
       "一款基于AI技术的食材营养分析小程序，帮助用户了解食材的营养成分和健康信息。",
     icon: "mdi:food-apple",
     image: "/images/wx-deepseek-logo.jpg",
-    images: ['/images/wx-deepseek-logo.jpg',"/images/wx-deepseek-1.jpg",'/images/wx-deepseek-2.jpg'],
+    images: [
+      "/images/wx-deepseek-logo.jpg",
+      "/images/wx-deepseek-1.jpg",
+      "/images/wx-deepseek-2.jpg",
+    ],
     technologies: [
       "Vue",
       "Nuxt",
@@ -246,11 +251,13 @@ const projects = [
       "DeepSeek",
       "Pinia",
     ],
-    link: [{
-      type: "wechat",
-      icon: "mdi:wechat",
-      text: "微信小程序",
-    }],
+    link: [
+      {
+        type: "wechat",
+        icon: "mdi:wechat",
+        text: "微信小程序",
+      },
+    ],
   },
   // 项目二：俞行日记手机app
   {
@@ -267,19 +274,20 @@ const projects = [
       "/images/HospitalTraveler-5.jpg",
     ],
     technologies: ["UniApp", "TailwindCSS", "Pinia", "Android Studio"],
-    link: [{
-      type: "github",
-      icon: "mdi:github",
-      text: "GitHub",
-      url: "https://github.com/LiangKuan4451/Hospital-Traveler/releases",
-    },
-    {
-      type: "github",
-      icon: "mdi:download",
-      text: "下载APP",
-      url: "/public/app/1.1.0.apk",
-    },
-  ],
+    link: [
+      {
+        type: "github",
+        icon: "mdi:github",
+        text: "GitHub",
+        url: "https://github.com/LiangKuan4451/Hospital-Traveler/releases",
+      },
+      {
+        type: "github",
+        icon: "mdi:download",
+        text: "下载APP",
+        url: "https://gitee.com/yingyu4451/panyy.xyz/raw/master/public/app/1.1.0.apk",
+      },
+    ],
   },
   {
     title: "PDF论文内容索引工具",
