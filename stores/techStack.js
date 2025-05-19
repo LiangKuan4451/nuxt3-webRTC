@@ -14,7 +14,6 @@ export const useTechStackStore = defineStore('techStack', () => {
     { name: 'Supabase', icon: 'simple-icons:supabase', proficiency: 50 },
     { name: 'Electron', icon: 'simple-icons:electron', proficiency: 40 },
     { name: 'Three.js', icon: 'mdi:video-3d', proficiency: 20 },
-    { name: 'PIXI.js', icon: 'devicon-plain:pixijs', proficiency: 20 },
     { name: 'Anime.js', icon: '', proficiency: 20 },
   ]
 

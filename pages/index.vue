@@ -38,10 +38,6 @@
                                 <Icon :name="tech.icon" size="1.5rem" class="text-primary" />
                                 <span class="font-medium">{{ tech.name }}</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="text-sm mr-2">{{ getProficiencyLabel(tech.proficiency) }}</span>
-                                <span class="text-sm">{{ tech.proficiency }}%</span>
-                            </div>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                             <div class="h-2.5 rounded-full" :class="getProficiencyColorClass(tech.proficiency)"
